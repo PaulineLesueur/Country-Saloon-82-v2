@@ -9,14 +9,17 @@ html
     font-size: 14px
 
 body
+    overflow-x: hidden
     background-color: $bodyBackground
     font-family: $mainFont
     color: $mainClr
 
-app-root
-    display: flex
-    flex-direction: column
-    min-height: 100vh;
+a
+    text-decoration: none
+    color: $linkClr
+    
+    &:hover
+        color: $accentClr
 
 main
     flex-grow: 1
@@ -27,3 +30,13 @@ main
     background: $mainBackground url('/assets/img/home/logo-background.png') no-repeat
     background-position: center
     padding: 20px
+
+app-root
+    display: flex
+    flex-direction: column
+    min-height: 100vh;
+
+app-footer
+    height: 180px
+    overflow: hidden
+    margin-top: 30px
