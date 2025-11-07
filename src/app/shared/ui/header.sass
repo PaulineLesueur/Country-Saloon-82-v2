@@ -1,0 +1,38 @@
+@use "../../../assets/style/var" as *
+
+header
+    position: relative
+    height: 645px
+    width: 100vw
+    background: linear-gradient(0deg,$bodyBackground, transparent 15%),linear-gradient(0deg,rgba(12, 12, 10, 0.6),transparent),linear-gradient(180deg,rgba(245, 241, 233, 0.1),transparent), $bannerHeader
+    background-size: cover
+    background-position: 50% 75%
+
+    h1
+        display: none
+
+    .container
+        position: absolute
+        left: 50%
+        transform: translateX(-350px)
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        margin-left: -50px
+        padding-top: 20px
+
+        img.logo
+            height:245px
+
+        h2 
+            font-size: 19px
+            font-weight: 400
+            text-align: center
+            color: $mainBackground
+
+            span
+                display: block;
+                font-family: $titleFont
+                font-size: 35px
+                letter-spacing: 2px
