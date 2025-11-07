@@ -1,0 +1,11 @@
+<section class="home-grid">
+    <a *ngFor="let link of links"
+        class="home-cards"
+        [style.background-image]="'url(' + link.photoUrl + ')'"
+        >
+        <div class="overlay">
+            <h3>{{ link.title }}</h3>
+        </div>
+    </a>
+</section>
+<p>home works!</p>
