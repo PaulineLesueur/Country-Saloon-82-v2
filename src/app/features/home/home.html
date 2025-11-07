@@ -1,7 +1,7 @@
 <section class="home-grid">
     <a *ngFor="let link of links"
         class="home-cards"
-        [style.background-image]="'url(' + link.photoUrl + ')'"
+        [style.background-image]="'linear-gradient(rgb(42 36 29 / 25%), rgb(42 36 29 / 60%)), url(' + link.photoUrl + ')'"
         >
         <div class="overlay">
             <h3>{{ link.title }}</h3>
