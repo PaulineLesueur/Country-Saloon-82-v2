@@ -1,0 +1,46 @@
+@use "../../../../assets/style/var" as *
+
+footer
+    display: flex
+    justify-content: center
+    padding-left: 300px
+
+    img
+        position: relative;
+        height: 225px
+    
+    img:first-child
+        z-index: 999
+        margin-right: -25px
+
+    .footer-links
+        display: flex
+        flex-direction: column
+        width: 205px
+        transform: rotate(-5.2deg);
+        background: url('/assets/img/footer/wooden-arrow-signs.png') no-repeat
+        padding-top: 10px
+        line-height: 60px
+        text-align: center
+
+        a
+            font-family: $accentFont
+            font-weight: 600
+            font-size: 20px
+            text-transform: lowercase
+
+    .copyright
+        width: 305px
+        margin-right: -25px
+        padding-top: 50px
+        line-height: 18px
+        transform: rotate(4deg)
+        background: url('/assets/img/footer/wooden-sign.png') no-repeat
+        font-family: $accentFont
+        font-weight: 600
+        font-size: 18px
+        text-transform: lowercase
+        text-align: center
+
+        span
+            display: block

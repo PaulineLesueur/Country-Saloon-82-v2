@@ -1,0 +1,58 @@
+@use "../../../../assets/style/var" as *
+
+nav
+    position: sticky
+    z-index: 999
+    top: 0
+    height: 150px
+    width: 1350px
+    margin: auto
+    background: url(/assets/img/header/western-wood-sign.png) no-repeat
+
+:host::ng-deep 
+    .p-menubar-root-list
+        display: flex;
+        justify-content: center
+        gap: 24px
+        width: 950px
+        padding-top: 87px
+        padding-left: 25px
+        transform: rotate(-0.6deg)
+        text-shadow: 0px 0px 10px #F0D4A2
+
+    .p-menubar-item.p-menubar-item-active
+        background: $mainBackground
+
+        .p-menubar-item-label
+            background: transparent
+    
+    .p-menubar-item-label
+        background: rgb(228 224 210 / 40%)
+        font-weight: 700
+        text-transform: uppercase
+        line-height: normal
+
+        &:hover
+            color: $accentClr
+
+    .p-menubar-submenu
+        width: 230px
+        margin-left: -1px
+        padding: 6px
+        background: $mainBackground
+        transform: rotate(0.6deg)
+
+        li
+            padding: 6px
+            border-bottom: 1px solid #D6C1A3
+
+        li:last-child
+            border: none
+
+        .p-menubar-item-label
+            background: transparent
+            font-weight: 400
+            text-transform: none
+
+            &::before
+                content: '↠ '
