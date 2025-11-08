@@ -3,7 +3,7 @@
 .home-grid
   display: grid
   grid-template-columns: repeat(3, 1fr)
-  column-gap: 10px
+  column-gap: 15px
 
   .home-cards
     cursor: pointer
@@ -43,3 +43,36 @@
     font-size: 26px
     letter-spacing: .5px
     color: $mainBackground
+
+.president-speech
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 90%
+    margin: auto
+    margin-top: 50px
+
+    p
+        width: 785px
+        line-height: 17px
+
+    .polaroid
+        width: 375px
+        height: 415px
+        background-color: #fff
+        padding: 30px
+        transform: rotate(3.72deg)
+
+        img
+            width: 315px
+            height: 310px
+            object-fit: cover
+
+        span
+            display: inline-block
+            width: 100%
+            padding-top: 20px
+            font-size: 20px
+            font-style: italic
+            text-align: center
+            color: $accentClr

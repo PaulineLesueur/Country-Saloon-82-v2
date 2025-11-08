@@ -8,4 +8,11 @@
         </div>
     </a>
 </section>
-<p>home works!</p>
+
+<section class="president-speech">
+    <p class="pre-wrap">{{ presidentData.speech }}</p>
+    <div class="polaroid">
+        <img [src]="presidentData.photoUrl" alt="Photo du président" />
+        <span class="legend">{{ presidentData.legend }}</span>
+    </div>
+</section>

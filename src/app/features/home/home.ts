@@ -12,6 +12,11 @@ import { CommonModule } from '@angular/common';
 export class Home implements OnInit {
   links: any[] = [];
   private routes = ['/evenements', '/cours', '/danses'];
+  presidentData = {
+    speech: '',
+    photoUrl: '',
+    legend: ''
+  };
 
   constructor(private homeService: HomeService) {}
 
@@ -22,5 +27,11 @@ export class Home implements OnInit {
       ...link,
       route: this.routes[index]
     }));
+    
+    const presidentRaw = await this.homeService.getPresidentSpeech();
+  this.presidentData = {
+    ...presidentRaw,
+    speech: presidentRaw.speech ? presidentRaw.speech.replace(/\\n/g, '\n') : ''
+  };
   }
 }
