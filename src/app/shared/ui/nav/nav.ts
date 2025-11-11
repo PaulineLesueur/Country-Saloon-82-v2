@@ -21,7 +21,8 @@ export class Nav implements OnInit {
         routerLink: '/'
       },
       {
-        label: 'B-A-BA de la Country'
+        label: 'B-A-BA de la Country',
+        routerLink: '/b-a-ba'
       },
       {
         label: 'Agenda'
