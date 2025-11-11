@@ -84,7 +84,7 @@
 
     .reseaux
         width: 340px
-        margin-top: 30px
+        margin-top: 50px
         text-align: right
 
         span
@@ -99,12 +99,14 @@
             line-height: 18px
 
         i
-            padding-top: 5px
+            padding-top: 15px
             font-size: 28px
             color: $accentClr
+            transition: .4s
 
             &:hover
                 color: $mainClr
+                transition: .4s
 
     p-galleria
         width: 100%
@@ -118,10 +120,13 @@
         row-gap: 10px
 
     .p-galleria-thumbnail-item-active img
+        width: 180px
+        height: 92px
+        object-fit: cover
         border: 3px solid $accentClr
 
     .p-galleria-items-container
-        height: 330px
+        height: 450px
         border-radius: 8px
         overflow: hidden
 
@@ -130,10 +135,18 @@
             height: 100%;
             object-fit: cover;
 
-        img.galleryThumbnail
-            width: 185px
-            height: 92px
-            object-fit: cover
+    .p-galleria-items .p-galleria-nav-button
+        width: 30px;
+        height: 30px;
+        background: #F5F1E9;
+        margin: 0 10px;
+        border-radius: 50%;
+        opacity: .6
+        transition: .4s
+
+    .p-galleria-items:hover .p-galleria-nav-button
+        opacity: 1
+        transition: .4s
 
     path
         fill: $accentClr

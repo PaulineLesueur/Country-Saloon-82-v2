@@ -20,32 +20,13 @@ export class Home implements OnInit {
   };
   images: any[] = [];
 
-  constructor(private homeService: HomeService) {
+  constructor(private homeService: HomeService) { 
     this.images = [
-      {
-        itemImgSrc: 'https://picsum.photos/id/1015/640/480',
-        thumbnailImgSrc: 'https://picsum.photos/id/1015/150/100'
-      },
-      {
-        itemImgSrc: 'https://picsum.photos/id/1025/640/480',
-        thumbnailImgSrc: 'https://picsum.photos/id/1025/150/100'
-      },
-      {
-        itemImgSrc: 'https://picsum.photos/id/1035/640/480',
-        thumbnailImgSrc: 'https://picsum.photos/id/1035/150/100'
-      },
-      {
-        itemImgSrc: 'https://picsum.photos/id/1045/640/480',
-        thumbnailImgSrc: 'https://picsum.photos/id/1045/150/100'
-      },
-      {
-        itemImgSrc: 'https://picsum.photos/id/1055/640/480',
-        thumbnailImgSrc: 'https://picsum.photos/id/1055/150/100'
-      },
-      {
-        itemImgSrc: 'https://picsum.photos/id/1025/640/480',
-        thumbnailImgSrc: 'https://picsum.photos/id/1025/150/100'
-      }
+      { itemImgSrc: 'https://picsum.photos/id/1015/1280/720', thumbnailImgSrc: 'https://picsum.photos/id/1015/150/100' },
+      { itemImgSrc: 'https://picsum.photos/id/1025/1280/720', thumbnailImgSrc: 'https://picsum.photos/id/1025/150/100' },
+      { itemImgSrc: 'https://picsum.photos/id/1035/1280/720', thumbnailImgSrc: 'https://picsum.photos/id/1035/150/100' },
+      { itemImgSrc: 'https://picsum.photos/id/1045/1280/720', thumbnailImgSrc: 'https://picsum.photos/id/1045/150/100' },
+      { itemImgSrc: 'https://picsum.photos/id/1055/1280/720', thumbnailImgSrc: 'https://picsum.photos/id/1055/150/100' },
     ];
   }
 

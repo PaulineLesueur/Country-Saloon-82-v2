@@ -36,6 +36,8 @@
         [numVisible]="5" 
         [circular]="true"
         [showThumbnails]="true"
+        [showItemNavigators]="true"
+        [autoPlay]="true"
         >
         <ng-template #item let-item>
             <img [src]="item.itemImgSrc" class="galleryImg" />
@@ -44,4 +46,4 @@
             <img [src]="item.thumbnailImgSrc" style="width: 180px;height: 92px;object-fit: cover;" />
         </ng-template>
     </p-galleria>
-</section>
+</section> 
