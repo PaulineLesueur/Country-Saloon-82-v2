@@ -36,4 +36,14 @@ export class HomeService {
             return { speech: '', photoUrl: '', legend: '' };
         }
     }
+
+    async getGalleryPhotos() {
+        const docRef = doc(this.firestore, 'home', 'gallery');
+        const docSnap = await getDoc(docRef);
+        if(docSnap.exists()) {
+            const data = docSnap.data();
+            return data['photoUrls'] ?? [];
+        }
+        return [];
+    }
 }

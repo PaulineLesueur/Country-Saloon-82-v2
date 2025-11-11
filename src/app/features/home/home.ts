@@ -18,17 +18,9 @@ export class Home implements OnInit {
     photoUrl: '',
     legend: ''
   };
-  images: any[] = [];
+  images: { itemImgSrc: string; thumbnailImgSrc: string }[] = [];
 
-  constructor(private homeService: HomeService) { 
-    this.images = [
-      { itemImgSrc: 'https://picsum.photos/id/1015/1280/720', thumbnailImgSrc: 'https://picsum.photos/id/1015/150/100' },
-      { itemImgSrc: 'https://picsum.photos/id/1025/1280/720', thumbnailImgSrc: 'https://picsum.photos/id/1025/150/100' },
-      { itemImgSrc: 'https://picsum.photos/id/1035/1280/720', thumbnailImgSrc: 'https://picsum.photos/id/1035/150/100' },
-      { itemImgSrc: 'https://picsum.photos/id/1045/1280/720', thumbnailImgSrc: 'https://picsum.photos/id/1045/150/100' },
-      { itemImgSrc: 'https://picsum.photos/id/1055/1280/720', thumbnailImgSrc: 'https://picsum.photos/id/1055/150/100' },
-    ];
-  }
+  constructor(private homeService: HomeService) { }
 
   async ngOnInit() {
     const firebaseLinks = await this.homeService.getLinks() ?? [];
@@ -43,5 +35,11 @@ export class Home implements OnInit {
       ...presidentRaw,
       speech: presidentRaw.speech ? presidentRaw.speech.replace(/\\n/g, '\n') : ''
     };
+
+    const photoUrls = await this.homeService.getGalleryPhotos();
+    this.images = photoUrls.map((url: any) => ({
+      itemImgSrc: url,
+      thumbnailImgSrc: url
+    }));
   }
 }
