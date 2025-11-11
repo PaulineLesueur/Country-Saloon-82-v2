@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, model, OnInit } from '@angular/core';
 import { HomeService } from '../../core/services/home.service';
 import { CommonModule } from '@angular/common';
+import { GalleriaModule } from 'primeng/galleria';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, GalleriaModule],
   templateUrl: './home.html',
   styleUrl: './home.sass',
 })
@@ -17,8 +18,36 @@ export class Home implements OnInit {
     photoUrl: '',
     legend: ''
   };
+  images: any[] = [];
 
-  constructor(private homeService: HomeService) {}
+  constructor(private homeService: HomeService) {
+    this.images = [
+      {
+        itemImgSrc: 'https://picsum.photos/id/1015/640/480',
+        thumbnailImgSrc: 'https://picsum.photos/id/1015/150/100'
+      },
+      {
+        itemImgSrc: 'https://picsum.photos/id/1025/640/480',
+        thumbnailImgSrc: 'https://picsum.photos/id/1025/150/100'
+      },
+      {
+        itemImgSrc: 'https://picsum.photos/id/1035/640/480',
+        thumbnailImgSrc: 'https://picsum.photos/id/1035/150/100'
+      },
+      {
+        itemImgSrc: 'https://picsum.photos/id/1045/640/480',
+        thumbnailImgSrc: 'https://picsum.photos/id/1045/150/100'
+      },
+      {
+        itemImgSrc: 'https://picsum.photos/id/1055/640/480',
+        thumbnailImgSrc: 'https://picsum.photos/id/1055/150/100'
+      },
+      {
+        itemImgSrc: 'https://picsum.photos/id/1025/640/480',
+        thumbnailImgSrc: 'https://picsum.photos/id/1025/150/100'
+      }
+    ];
+  }
 
   async ngOnInit() {
     const firebaseLinks = await this.homeService.getLinks() ?? [];
@@ -29,9 +58,9 @@ export class Home implements OnInit {
     }));
     
     const presidentRaw = await this.homeService.getPresidentSpeech();
-  this.presidentData = {
-    ...presidentRaw,
-    speech: presidentRaw.speech ? presidentRaw.speech.replace(/\\n/g, '\n') : ''
-  };
+    this.presidentData = {
+      ...presidentRaw,
+      speech: presidentRaw.speech ? presidentRaw.speech.replace(/\\n/g, '\n') : ''
+    };
   }
 }
