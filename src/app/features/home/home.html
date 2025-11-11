@@ -1,0 +1,49 @@
+<section class="home-grid">
+    <a *ngFor="let link of links"
+        class="home-cards"
+        [style.background-image]="'linear-gradient(rgb(42 36 29 / 25%), rgb(42 36 29 / 60%)), url(' + link.photoUrl + ')'"
+        >
+        <div class="overlay">
+            <h3>{{ link.title }}</h3>
+        </div>
+    </a>
+</section>
+
+<section class="president-speech">
+    <p class="pre-wrap">{{ presidentData.speech }}</p>
+    <div class="polaroid">
+        <img [src]="presidentData.photoUrl" alt="Photo du président" />
+        <span class="legend">{{ presidentData.legend }}</span>
+    </div>
+</section>
+
+<section class="carousel">
+    <div class="reseaux">
+        <span>Country Saloon 82 en images</span>
+        <p>
+            suivez nous sur les réseaux sociaux<br>
+            pour en voir d'autres !
+        </p>
+        <a href="https://www.facebook.com/countrysaloon82" 
+            target="_blank" 
+            title="Page facebook du club"
+        >
+            <i class="pi pi-facebook"></i>
+        </a>
+    </div>
+    <p-galleria 
+        [value]="images" 
+        [numVisible]="5" 
+        [circular]="true"
+        [showThumbnails]="true"
+        [showItemNavigators]="true"
+        [autoPlay]="true"
+        >
+        <ng-template #item let-item>
+            <img [src]="item.itemImgSrc" class="galleryImg" />
+        </ng-template>
+        <ng-template #thumbnail let-item>
+            <img [src]="item.thumbnailImgSrc" style="width: 180px;height: 92px;object-fit: cover;" />
+        </ng-template>
+    </p-galleria>
+</section> 
