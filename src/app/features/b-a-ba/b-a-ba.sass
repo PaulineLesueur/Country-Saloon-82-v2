@@ -1,0 +1,79 @@
+@use "../../../assets/style/var" as *;
+
+.container
+    width: 90%
+    margin: 50px auto
+
+section
+    margin-top: 50px
+
+    .b-a-ba
+        margin: 0
+
+h2
+    display: flex
+    align-items: center
+    gap: 10px
+    margin-bottom: 20px
+    font-family: $titleFont
+    font-size: 36px
+    letter-spacing: .5px
+    color: $accentClr
+
+    &::before
+        content: '↠ '
+        font-size: 30px
+        font-weight: 500
+
+img 
+    float: left
+    max-width: 100%
+    margin-right: 20px
+
+    &.decoupage
+        float: none
+        display: block
+        margin: auto
+
+    &.pratiquer 
+            width: 35%
+
+p.pied 
+    display: flex
+    justify-content: space-evenly
+    flex-wrap: wrap
+    padding: 20px 0
+    border-top: 1px solid lightgrey
+    border-bottom: 1px solid lightgrey
+
+.pas 
+    display: grid
+    grid-template-columns: 200px auto
+    row-gap: 20px
+            
+
+.doc
+    display: block
+    text-align: right
+
+.pot
+    display: grid
+    grid-template-columns: auto 65%
+    gap: 20px
+
+    p
+        padding-top: 50px
+            
+.polaroid
+    width: 375px
+    height: 415px
+    background-color: #fff
+    box-shadow: 2px 3px 5px #00000033;
+    padding: 30px
+    transform: rotate(3.72deg)
+
+    img
+        width: 315px
+        height: 310px
+        object-fit: cover
+        margin: 0
