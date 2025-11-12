@@ -1,0 +1,23 @@
+@use "../../../../assets/style/var" as *
+
+:host ::ng-deep
+    .p-breadcrumb
+        font-size: 11px
+        font-weight: 600
+        text-transform: uppercase
+        letter-spacing: .5px
+
+    .p-breadcrumb-list
+        gap: 5px
+
+        li:last-child a
+            color: $accentClr
+
+    .p-breadcrumb-separator
+        svg
+            display: none
+
+        &::before
+            content: '↠ '
+            font-size: 16px
+            font-weight: 400
