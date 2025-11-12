@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-b-a-ba',
@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './b-a-ba.html',
   styleUrl: './b-a-ba.sass',
 })
-export class BABa {
+export class BABa implements OnInit {
+  constructor() {}
 
+  ngOnInit() {
+  }
 }
